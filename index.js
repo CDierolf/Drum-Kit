@@ -31,6 +31,18 @@ function playNote(selector) {
             audio.play();
             break;
     }
+    // Animate the button
+    animateDrum(selector);
+}
+
+function animateDrum(selector) {
+    var activeBtn = document.querySelector("." + selector);
+
+    setTimeout(function() {
+        activeBtn.classList.remove("pressed");
+    }, 100 );
+
+    activeBtn.classList.add("pressed");
 }
 
 function bangTheDrum() {
@@ -45,6 +57,7 @@ function bangTheDrum() {
             playNote(element.innerHTML);
         });
     });
+    
 }
 
 bangTheDrum();
