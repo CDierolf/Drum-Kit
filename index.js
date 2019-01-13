@@ -47,4 +47,4 @@ function bangTheDrum() {
     });
 }
 
-fbangTheDrum();
+bangTheDrum();
